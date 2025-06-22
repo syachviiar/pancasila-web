@@ -1,0 +1,133 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+h1, h2, p {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Splash Container */
+.splash-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Tombol Play */
+.btn-play {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #e63946;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.btn-play:hover {
+  background: #d62839;
+}
+.btn-play:active {
+  transform: scale(0.95);
+}
+
+/* Tombol Menu Umum */
+.menu-btn {
+  display: block;
+  margin: 15px auto;
+  padding: 14px 24px;
+  background: #1d3557;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  width: 80%;
+}
+.menu-btn:hover {
+  background: #16324f;
+}
+.menu-btn:active {
+  transform: scale(0.97);
+}
+
+/* Tombol Kembali */
+.btn-back {
+  display: block;
+  margin: 16px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Container Umum */
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* ANIMASI */
+
+/* Slide + Fade saat halaman masuk */
+.slide-fade-in {
+  animation: slideFadeIn 0.6s ease;
+}
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scale-in untuk splash screen */
+.scale-in {
+  animation: scaleIn 0.5s ease-in-out;
+}
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsif */
+@media screen and (max-width: 600px) {
+  .btn-play, .menu-btn {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}

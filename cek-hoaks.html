@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cek Hoaks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e0e7f1);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .splash-container {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 24px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      width: 95%;
+    }
+
+    h2 {
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.9em;
+      color: #003566;
+      margin-bottom: 30px;
+    }
+
+    .card-slider {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 20px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .card-slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card {
+      flex: 0 0 90%;
+      scroll-snap-align: center;
+      background: #f5f8fc;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      min-width: 280px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      font-size: 1.1em;
+      color: #1d3557;
+      margin-bottom: 12px;
+    }
+
+    .card p, .card ul {
+      font-size: 0.96rem;
+      color: #444;
+      margin: 0 0 12px;
+      line-height: 1.6;
+    }
+
+    .card ul {
+      padding-left: 18px;
+    }
+
+    .card a {
+      color: #1d3557;
+      text-decoration: underline;
+    }
+
+    .btn-back {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 25px auto 0;
+      padding: 12px 20px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #457b9d, #5d9ecf);
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-back:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(69, 123, 157, 0.3);
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        flex: 0 0 100%;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="splash-container">
+    <h2>📘 Edukasi tentang Hoaks</h2>
+
+    <div class="card-slider">
+      <div class="card">
+        <h3>🧠 Apa Itu Hoaks?</h3>
+        <p>Hoaks adalah informasi palsu yang dibuat untuk menyesatkan, memprovokasi, atau menipu publik. Di era digital, hoaks menyebar cepat lewat media sosial.</p>
+      </div>
+
+      <div class="card">
+        <h3>⚠️ Dampak Hoaks</h3>
+        <ul>
+          <p>1. Menimbulkan panik dan kebencian</p>
+          <p>2. Memecah persatuan bangsa</p>
+          <p>3. Merusak reputasi individu/kelompok</p>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🔍 Cara Mengenali Hoaks</h3>
+        <ul>
+          <p>1. Periksa sumber dan penulis</p>
+          <p>2. Waspadai judul provokatif</p>
+          <p>3. Cek tanggal & konteks informasi</p>
+          <p>4. Gunakan <a href="https://turnbackhoax.id" target="_blank">turnbackhoax.id</a> atau <a href="https://cekfakta.com" target="_blank">cekfakta.com</a></p>
+        </ul>
+      </div>
+    </div>
+
+    <a href="main.html" class="btn-back">← Kembali ke Menu Utama</a>
+  </div>
+</body>
+</html>
