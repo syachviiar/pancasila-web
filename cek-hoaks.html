@@ -7,115 +7,123 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <style>
-    body {
-      font-family: 'Nunito', sans-serif;
-      background: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
+  body {
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
 
-    .container {
-      background: #fff;
-      padding: 30px 25px;
-      border-radius: 14px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-      max-width: 480px;
-      width: 90%;
-    }
+  .container {
+    padding: 30px 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    max-width: 500px;
+    width: 100%;
+  }
 
-    h2 {
-      margin-top: 0;
-      font-size: 1.6em;
-      text-align: center;
-      color: #2a9d8f;
-    }
+  h2 {
+    margin-top: 0;
+    font-size: 1.7em;
+    text-align: center;
+    color: #2a9d8f;
+    margin-bottom: 10px;
+  }
 
-    p {
-      font-size: 0.95em;
-      color: #555;
-      text-align: center;
-      margin-bottom: 20px;
-    }
+  p {
+    font-size: 0.95em;
+    color: #555;
+    text-align: center;
+    margin-bottom: 25px;
+  }
 
-    textarea {
-      width: 100%;
-      padding: 12px;
-      font-size: 1em;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      resize: none;
-      box-sizing: border-box;
-    }
+  textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    min-height: 100px;
+  }
 
-    button {
-      margin-top: 15px;
-      width: 100%;
-      padding: 10px;
-      font-size: 1em;
-      background: #2a9d8f;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
+  textarea:focus {
+    outline: none;
+    border-color: #2a9d8f;
+    box-shadow: 0 0 4px rgba(42, 157, 143, 0.3);
+  }
 
-    button:hover {
-      background: #21867a;
-    }
+  button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    background: #2a9d8f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
 
-    .result {
-      margin-top: 20px;
-      padding: 14px;
-      border-radius: 10px;
-      font-size: 0.95em;
-      line-height: 1.5;
-    }
+  button:hover {
+    background: #21867a;
+  }
 
-    .hoaks {
-      background: #ffecec;
-      border-left: 4px solid #e63946;
-    }
+  .result {
+    margin-top: 20px;
+    padding: 16px 18px;
+    border-radius: 10px;
+    font-size: 0.95em;
+    line-height: 1.6;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
 
-    .aman {
-      background: #e2f4ec;
-      border-left: 4px solid #2a9d8f;
-    }
+  .hoaks {
+    background: #ffecec;
+    border-left: 4px solid #e63946;
+  }
 
-    .btn-back {
-      display: block;
-      margin-top: 25px;
-      text-align: center;
-      background: #264653;
-      color: #fff;
-      padding: 10px 0;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 0.95em;
-      transition: background 0.2s;
-    }
+  .aman {
+    background: #e2f4ec;
+    border-left: 4px solid #2a9d8f;
+  }
 
-    .btn-back:hover {
-      background: #1f3f45;
-    }
+  .btn-back {
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+    background: #264653;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: background 0.3s ease;
+  }
 
-    a.source {
-      color: #1d3557;
-      text-decoration: underline;
-    }
-  </style>
+  .btn-back:hover {
+    background: #1f3f45;
+  }
+
+  a.source {
+    color: #1d3557;
+    text-decoration: underline;
+  }
+</style>
+
 </head>
 <body>
   <div class="container">
-    <h2>🔍 Cek Hoaks (Simulasi)</h2>
+    <h2><i class="bi bi-search"></i> Cek Hoaks (Simulasi)</h2>
     <p>Ketik berita atau info yang ingin kamu periksa. Sistem akan menyesuaikan dengan hoaks yang pernah beredar.</p>
 
     <textarea id="inputBerita" placeholder="Contoh: Vaksin COVID-19 Mengandung..."></textarea>
-    <button onclick="cekHoaks()">Cek Sekarang</button>
+    <button onclick="cekHoaks()"><i class="bi bi-search"></i> Cek Sekarang</button>
 
     <div id="hasil" class="result" style="display: none;"></div>
 

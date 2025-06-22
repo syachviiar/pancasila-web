@@ -37,6 +37,31 @@
       font-size: 0.9em;
       color: #555;
     }
+    
+    .pagination {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .pagination button {
+    margin: 0 4px;
+    padding: 8px 14px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .pagination button.active {
+    background-color: #2a9d8f;
+    color: white;
+    border-color: #2a9d8f;
+  }
+
+  .pagination button:hover {
+    background-color: #ccc;
+  }
   </style>
 </head>
 <body>
@@ -242,7 +267,42 @@
         </div>
     
         <a href="main.html" class="btn-back">← Kembali ke Menu Utama</a>
+        <!-- Pagination Buttons -->
+        <div id="pagination" class="pagination"></div>
     </div>
 </body>
+<script>
+    const cardsPerPage = 3;
+    const cards = document.querySelectorAll(".hoaks-card");
+    const totalPages = Math.ceil(cards.length / cardsPerPage);
+    const pagination = document.getElementById("pagination");
   
+    function showPage(page) {
+      const start = (page - 1) * cardsPerPage;
+      const end = start + cardsPerPage;
+  
+      cards.forEach((card, index) => {
+        card.style.display = (index >= start && index < end) ? "block" : "none";
+      });
+  
+      // Update button active state
+      const buttons = document.querySelectorAll("#pagination button");
+      buttons.forEach((btn, i) => {
+        btn.classList.toggle("active", i + 1 === page);
+      });
+    }
+  
+    function createPagination() {
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement("button");
+        btn.textContent = i;
+        btn.addEventListener("click", () => showPage(i));
+        pagination.appendChild(btn);
+      }
+    }
+  
+    // Inisialisasi
+    createPagination();
+    showPage(1);
+  </script>
 </html>
