@@ -1,133 +1,93 @@
-/* Reset */
+/* Reset dasar */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* style.css */
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #f9f9f9;
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
   color: #333;
 }
 
-h1, h2, p {
-  text-align: center;
-  margin-bottom: 16px;
-}
-
-a {
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-/* Splash Container */
-.splash-container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
-
-/* Tombol Play */
-.btn-play {
-  display: inline-block;
-  padding: 14px 28px;
-  background: #e63946;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 10px;
-  margin-top: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-.btn-play:hover {
-  background: #d62839;
-}
-.btn-play:active {
-  transform: scale(0.95);
-}
-
-/* Tombol Menu Umum */
-.menu-btn {
-  display: block;
-  margin: 15px auto;
-  padding: 14px 24px;
-  background: #1d3557;
-  color: #fff;
-  border-radius: 8px;
-  font-weight: bold;
-  width: 80%;
-}
-.menu-btn:hover {
-  background: #16324f;
-}
-.menu-btn:active {
-  transform: scale(0.97);
-}
-
-/* Tombol Kembali */
-.btn-back {
-  display: block;
-  margin: 16px;
-  color: #333;
-  font-weight: bold;
-}
-
-/* Container Umum */
 .container {
-  max-width: 600px;
-  margin: auto;
-  padding: 30px 20px;
+  max-width: 750px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #2a9d8f;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-/* ANIMASI */
-
-/* Slide + Fade saat halaman masuk */
-.slide-fade-in {
-  animation: slideFadeIn 0.6s ease;
-}
-@keyframes slideFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+h3 {
+  color: #264653;
+  margin-top: 25px;
 }
 
-/* Scale-in untuk splash screen */
-.scale-in {
-  animation: scaleIn 0.5s ease-in-out;
-}
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.85);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+p {
+  font-size: 1.05em;
+  line-height: 1.7;
+  margin-bottom: 15px;
 }
 
-/* Responsif */
-@media screen and (max-width: 600px) {
-  .btn-play, .menu-btn {
-    font-size: 16px;
-    padding: 12px 20px;
+ul {
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1.05em;
+}
+
+strong {
+  color: #264653;
+}
+
+em {
+  color: #2b2d42;
+  font-style: italic;
+}
+
+.btn-back {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 20px;
+  background: #264653;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-back:hover {
+  background-color: #2a9d8f;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 25px 15px;
+    padding: 25px 20px;
   }
 
-  h1 {
-    font-size: 28px;
+  h2 {
+    font-size: 1.5em;
   }
 
-  p {
-    font-size: 16px;
+  p, ul li {
+    font-size: 1em;
   }
 }

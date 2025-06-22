@@ -3,127 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Materi Pancasila</title>
+  <title>Materi Edukasi Pancasila</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <style>
     body {
+      font-family: 'Nunito', sans-serif;
       margin: 0;
       padding: 0;
-      font-family: 'Open Sans', sans-serif;
-      background: linear-gradient(to right, #f8f9fa, #e0e7f1);
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
       color: #333;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      animation: fadeIn 1s ease;
+      min-height: 100vh;
     }
 
-    .splash-container {
-      background: white;
-      padding: 45px 35px;
-      border-radius: 24px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-      max-width: 480px;
+    .container {
+      max-width: 450px;
       width: 90%;
-      animation: scaleIn 0.8s ease;
+      background: #fff;
+      padding: 40px 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
       text-align: center;
-      position: relative;
-    }
-
-    .splash-container::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 4px;
-      background: linear-gradient(to right, #1d3557, #457b9d);
-      border-radius: 10px;
     }
 
     h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.9em;
-      color: #003566;
       margin-bottom: 25px;
+      color: #2a9d8f;
     }
 
-    .menu-btn {
+    .materi-btn {
       display: block;
-      width: 100%;
-      padding: 13px 20px;
-      margin-bottom: 15px;
+      background-color: #264653;
+      color: white;
+      padding: 14px;
+      margin: 12px 0;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 12px;
-      border: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      background: linear-gradient(135deg, #1d3557, #27496d);
-      color: #fff;
+      border-radius: 10px;
+      transition: transform 0.2s, background 0.2s;
     }
 
-    .menu-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(29, 53, 87, 0.3);
+    .materi-btn:hover {
+      background-color: #2a9d8f;
+      transform: scale(1.03);
     }
 
     .btn-back {
-      display: block;
-      width: 100%;
-      padding: 12px 20px;
+      display: inline-block;
       margin-top: 25px;
-      text-align: center;
-      font-weight: bold;
-      border-radius: 12px;
+      background: #999;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
       text-decoration: none;
-      background: linear-gradient(135deg, #457b9d, #5d9ecf);
-      color: #fff;
-      transition: all 0.3s ease;
+      transition: transform 0.2s;
     }
 
     .btn-back:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(69, 123, 157, 0.3);
+      transform: scale(1.05);
+      background-color: #666;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes scaleIn {
-      from { transform: scale(0.95); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-
-    @media (max-width: 480px) {
-      .splash-container {
+    @media (max-width: 600px) {
+      .container {
         padding: 30px 20px;
-      }
-
-      h2 {
-        font-size: 1.6em;
-      }
-
-      .menu-btn, .btn-back {
-        font-size: 0.95em;
       }
     }
   </style>
 </head>
-<body>
-  <div class="splash-container">
-    <h2>📘 Materi Nilai Pancasila</h2>
-    <a href="materi1.html" class="menu-btn">1️⃣ Ketuhanan yang Maha Esa</a>
-    <a href="materi2.html" class="menu-btn">2️⃣ Kemanusiaan yang Adil dan Beradab</a>
-    <a href="materi3.html" class="menu-btn">3️⃣ Persatuan Indonesia</a>
-    <a href="materi4.html" class="menu-btn">4️⃣ Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan</a>
-    <a href="materi5.html" class="menu-btn">5️⃣ Keadilan Sosial bagi Seluruh Rakyat</a>
-    <a href="main.html" class="btn-back">← Kembali ke Menu Utama</a>
+<body class="slide-fade-in">
+  <div class="container">
+    <h2>📚 Materi Edukasi</h2>
+
+    <a href="materi1.html" class="materi-btn">Materi 1: Pancasila Sebagai Dasar Negara</a>
+    <a href="materi2.html" class="materi-btn">Materi 2: Nilai-nilai Pancasila Dalam Kehidupan</a>
+    <a href="materi3.html" class="materi-btn">Materi 3: Hoaks & Disinformasi</a>
+    <a href="materi4.html" class="materi-btn">Materi 4: Intoleransi dan Ancaman Kebhinekaan</a>
+    <a href="materi5.html" class="materi-btn">Materi 5: Peran Generasi Muda di Era Digital</a>
+
+    <a href="main.html" class="btn-back"><i class="bi-arrow-return-left"></i> Kembali ke Menu Utama</a>
   </div>
 </body>
 </html>
